@@ -42,7 +42,7 @@ namespace ClientTest
 
         private void Send_Click(object sender, RoutedEventArgs e)
         {
-
+            SendMessage();
         }
 
         public async void SendMessage()
