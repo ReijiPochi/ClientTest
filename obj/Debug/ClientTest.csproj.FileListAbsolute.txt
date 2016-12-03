@@ -1,0 +1,14 @@
+F:\GitHub\ClientTest\ClientTest\bin\Debug\ClientTest.exe.config
+F:\GitHub\ClientTest\ClientTest\bin\Debug\ClientTest.exe
+F:\GitHub\ClientTest\ClientTest\bin\Debug\ClientTest.pdb
+F:\GitHub\ClientTest\ClientTest\obj\Debug\ClientTest.csprojResolveAssemblyReference.cache
+F:\GitHub\ClientTest\ClientTest\obj\Debug\MainWindow.g.cs
+F:\GitHub\ClientTest\ClientTest\obj\Debug\App.g.cs
+F:\GitHub\ClientTest\ClientTest\obj\Debug\ClientTest_MarkupCompile.cache
+F:\GitHub\ClientTest\ClientTest\obj\Debug\ClientTest_MarkupCompile.lref
+F:\GitHub\ClientTest\ClientTest\obj\Debug\MainWindow.baml
+F:\GitHub\ClientTest\ClientTest\obj\Debug\ClientTest.g.resources
+F:\GitHub\ClientTest\ClientTest\obj\Debug\ClientTest.Properties.Resources.resources
+F:\GitHub\ClientTest\ClientTest\obj\Debug\ClientTest.csproj.GenerateResource.Cache
+F:\GitHub\ClientTest\ClientTest\obj\Debug\ClientTest.exe
+F:\GitHub\ClientTest\ClientTest\obj\Debug\ClientTest.pdb
