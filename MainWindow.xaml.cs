@@ -54,7 +54,7 @@ namespace ClientTest
             var message = Encoding.UTF8.GetBytes("Hello world !");
 
             // UDPでメッセージ送信
-            var client = new UdpClient(810);
+            var client = new UdpClient(931);
             client.Connect(remote);
             await client.SendAsync(message, message.Length);
             client.Close();
