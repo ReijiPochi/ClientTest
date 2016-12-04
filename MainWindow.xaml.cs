@@ -30,14 +30,21 @@ namespace ClientTest
             Closing += MainWindow_Closing;
         }
 
+        UdpClient client;
+        bool clientConnected = false;
+
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            client = new UdpClient(AddressFamily.InterNetwork);
+            client.Connect("reiji-matlab.mydns.jp", 810);
+            clientConnected = true;
+
+            ListenMessage();
         }
 
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            
+            clientConnected = false;
         }
 
         private void Send_Click(object sender, RoutedEventArgs e)
@@ -47,18 +54,25 @@ namespace ClientTest
 
         public async void SendMessage()
         {
-            // 宛先の作成
-            var remote = new IPEndPoint(IPAddress.Parse("192.168.3.30"), 810);
-
             // メッセージの準備
             var message = Encoding.UTF8.GetBytes("Hello world !");
 
             // UDPでメッセージ送信
-            var client = new UdpClient(931);
-            client.Connect(remote);
             await client.SendAsync(message, message.Length);
-            client.Close();
         }
 
+        public async void ListenMessage()
+        {
+            while (clientConnected)
+            {
+                // データ受信待機
+                var result = await client.ReceiveAsync();
+
+                // 受信したデータを変換
+                var data = Encoding.UTF8.GetString(result.Buffer);
+
+                ConsoleTb.Text += data + "\n";
+            }
+        }
     }
 }
